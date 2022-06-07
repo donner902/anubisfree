@@ -1,0 +1,32 @@
+#!/bin/bash
+#################
+# GÊNIO HACKER 
+#################
+clear
+echo -e "\033[01;31m║\033[1;31m\033[05;33;42m           CRIPTOGRAFA               \033[1;33m \033[0m\033[01;31m║"
+add-apt-repository ppa:neurobin/ppa
+apt-get update
+apt-get install shc
+apt-get install gcc
+apt install software-properties-common
+echo ""
+echo "" 
+echo -e "\033[1;31m║\033[1;34m[\033[1;37m01 •\033[1;34m]\033[1;37m ➩ \033[1;33mCRIPTOGRAFA ARQUIVO\033[0;32m"
+echo -e "\033[1;31m║\033[1;34m[\033[1;37m00 •\033[1;34m]\033[1;37m ➩ \033[1;33mSAIR \033[0;32m"
+
+echo -ne "\n\033[1;31mDIGITE \033[1;33mA OPÇÃO \033[1;32mDESEJADA!\033[0m"; read x
+
+case "$x" in
+
+1)
+echo "QUAL ARQUIVO DESEJA CRIPTOGRAFA ?" ; read pr
+shc -v -r -f $pr
+echo "CRIPTOGRAFADO COM SUCESSO"
+echo "" 
+echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read 
+./criptografa
+;;
+0)
+menu
+;;
+esac
